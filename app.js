@@ -120,16 +120,17 @@ $(document).ready(function () {
             $('h2').fadeOut('6000');
             $('h1').text("The winner is..." + currentName.toUpperCase());
             $('h1').css({
-                'color': 'red',
+                'color': 'currentColor',
                 'font-size': '60px',
-                'background-color': 'yellow'
+                'background-color': '#FFE066'
             })
-            $('.board button').hide();
+            
             for (var row = 0; row < 6; row++) {
                 for (var col = 0; col < 7; col++) {
                     table.eq(row).find('td').eq(col).find('button').fadeIn(2000).css('background-color', currentColor);
                 }
             }
+            $('.board').fadeOutde();
 
         }
         currentPlayer = currentPlayer * -1;
