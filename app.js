@@ -122,14 +122,15 @@ $(document).ready(function () {
             $('h1').css({
                 'color': 'red',
                 'font-size': '60px',
-                'background-color': 'yellow'
+                'background-color': 'grey'
             })
-            $('.board button').hide();
-            for (var row = 0; row < 6; row++) {
-                for (var col = 0; col < 7; col++) {
-                    table.eq(row).find('td').eq(col).find('button').fadeIn(2000).css('background-color', currentColor);
-                }
-            }
+            
+            // for (var row = 0; row < 6; row++) {
+            //     for (var col = 0; col < 7; col++) {
+            //         table.eq(row).find('td').eq(col).find('button').fadeIn(2000).css('background-color', currentColor);
+            //     }
+            // }
+            $('.board').fadeOut();
 
         }
         currentPlayer = currentPlayer * -1;
